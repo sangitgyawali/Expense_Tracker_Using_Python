@@ -78,4 +78,22 @@ def show_menu():
     print("6. Exit")
     print("==================================")
 
+while True:
+    show_menu()
+    choice = input("Enter your choice (1-6): ")
     
+    if choice == "1":
+        add_expense()
+    elif choice == "2":
+        view_expenses()
+    elif choice == "3":
+        total_expenses()
+    elif choice == "4":
+        filter_by_date()
+    elif choice == "5":
+        filter_by_category()
+    elif choice == "6":
+        print("👋 Exiting... Goodbye!")
+        break
+    else:
+        print("⚠️ Invalid choice. Please try again.\n")
