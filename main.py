@@ -47,3 +47,13 @@ def total_expenses():
             except ValueError:
                 continue
     print(f"\n💰 Total Expenses: Rs. {total:.2f}\n")
+
+def filter_by_date():
+    date = input("Enter date to filter (YYYY-MM-DD): ")
+    with open(FILENAME, mode="r") as file:
+        reader = csv.DictReader(file)
+        print(f"\n📅 Expenses on {date}:")
+        for row in reader:
+            if row["date"] == date:
+                print(f"{row['category']} | Rs. {row['amount']} | {row['description']}")
+    print()
