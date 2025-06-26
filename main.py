@@ -68,3 +68,14 @@ def filter_by_category():
                 print(f"{row['date']} | Rs. {row['amount']} | {row['description']}")
     print()
 
+def show_menu():
+    print("==== 🧾 Expense Tracker Menu ====")
+    print("1. Add Expense")
+    print("2. View All Expenses")
+    print("3. Show Total Expenses")
+    print("4. Filter by Date")
+    print("5. Filter by Category")
+    print("6. Exit")
+    print("==================================")
+
+    
