@@ -57,3 +57,14 @@ def filter_by_date():
             if row["date"] == date:
                 print(f"{row['category']} | Rs. {row['amount']} | {row['description']}")
     print()
+
+def filter_by_category():
+    category = input("Enter category to filter: ").lower()
+    with open(FILENAME, mode="r") as file:
+        reader = csv.DictReader(file)
+        print(f"\n📂 Expenses in category '{category}':")
+        for row in reader:
+            if row["category"].lower() == category:
+                print(f"{row['date']} | Rs. {row['amount']} | {row['description']}")
+    print()
+
